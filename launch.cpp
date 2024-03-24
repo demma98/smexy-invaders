@@ -11,7 +11,7 @@
 #define SCREEN_WIDTH 480
 #define SCREEN_HEIGHT 360
 
-#define SHIP_MAX_SPEED 3
+#define SHIP_MAX_SPEED 4
 
 using namespace std;
 
@@ -216,6 +216,11 @@ void update_frame(list<Stars> *stars, list<Ship> *ships, list<Bullet> *bullets, 
                         ships->begin()->dead = true;
 
                 s->texture = enemy_texture;
+
+                if(s->speed_x == 1)
+                    s->speed_x++;
+                else if(s->speed_x == -1)
+                    s->speed_x--;
             }
             else{
                 //player
