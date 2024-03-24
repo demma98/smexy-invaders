@@ -1,0 +1,1 @@
+g++ -o launch launch.cpp ship.cpp stars.cpp -lSDL2 -lSDL2main -lSDL2_image -m32 -mwindows
